@@ -2,10 +2,11 @@ package com.aslan.amani.shoppinglist;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class SignUpActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView etName;
     private TextView etEmail;
     private TextView password;
@@ -18,10 +19,14 @@ public class SignUpActivity extends AppCompatActivity {
         etName = (TextView) findViewById(R.id.etName);
         etEmail = (TextView) findViewById(R.id.etEmail);
         password = (TextView) findViewById(R.id.password);
-        save = (Button) findViewById (R.id.Save);
-
-
-
+        save.setOnClickListener(this);
     }
 
+    @Override
+    public void onClick(View view) {
+        if (save==view)
+        {
+
+        }
+    }
 }

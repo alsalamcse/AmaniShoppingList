@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView password;
     private TextView email;
@@ -27,10 +27,17 @@ public class MainActivity extends AppCompatActivity {
         btnSignup=(Button)findViewById(R.id.signUp);
 
 
-
-
+         btnSignIn.setOnClickListener(this);
     }
 
 
+    @Override
+    public void onClick(View view)
+    {
+if (btnSignIn==view)
+        {
 
+        }
+
+    }
 }
