@@ -50,6 +50,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Save"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="356dp" />
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="359dp" />
 </android.support.constraint.ConstraintLayout>
