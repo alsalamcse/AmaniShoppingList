@@ -8,48 +8,48 @@
 
     <EditText
         android:id="@+id/ItemName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="353dp"
+        android:layout_height="51dp"
         android:ems="10"
         android:hint="@string/Item"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="25dp" />
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="179dp" />
 
     <EditText
         android:id="@+id/etAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="354dp"
+        android:layout_height="52dp"
         android:ems="10"
         android:hint="@string/Amount"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="81dp" />
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="82dp" />
 
     <EditText
         android:id="@+id/etUnits"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="355dp"
+        android:layout_height="43dp"
         android:ems="10"
         android:hint="@string/Units"
         android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteX="3dp"
         tools:layout_editor_absoluteY="136dp" />
 
     <ImageButton
         android:id="@+id/iBtnImage"
-        android:layout_width="365dp"
-        android:layout_height="81dp"
-        android:layout_marginRight="-3dp"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="212dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="86dp"
         app:srcCompat="@android:drawable/ic_menu_report_image"
-        tools:layout_editor_absoluteY="215dp" />
+        tools:layout_editor_absoluteY="264dp"
+        tools:layout_editor_absoluteX="57dp" />
 
     <Button
         android:id="@+id/BtnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Save"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="359dp" />
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="348dp" />
 </android.support.constraint.ConstraintLayout>

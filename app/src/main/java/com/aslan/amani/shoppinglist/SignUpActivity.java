@@ -23,10 +23,56 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     @Override
-    public void onClick(View view) {
-        if (save==view)
+    public void onClick(View v) {
+
+        {
+          dataHandler();
+        }
+    }
+
+
+     private void dataHandler()
+    {
+        String stEmail= etEmail.getText().toString();
+        String stName= etName.getText().toString();
+        String stPassw=password.getText().toString();
+          boolean isOk= true; // to chek if all feilds are filled correctly
+        if (stEmail.length()==0 ) || stEmail.indexOf('0')<1)
+        {
+            etEmail.setError("wrong email");
+            isOk=false;
+
+        }
+        if (stPassw.length()<8)||stPassw.equals(stPassw)==false)
         {
 
         }
+
+        creatAcount(); (stEmail,stPassw);
+
     }
+
+
+
+    private void creatAcount(String email, String passw) {
+        auth.createUserWithEmailAndPassword(email,passw).addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful())
+                {
+                    Toast.makeText(SignUpActivity.this, "Authentication Successful.", Toast.LENGTH_SHORT).show();
+                    //updateUserProfile(task.getResult().getUser());
+                    finish();
+                }
+                else
+                {
+                    Toast.makeText(SignUpActivity.this, "Authentication failed."+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    task.getException().printStackTrace();
+                }
+            }
+        });
+    }
+
+
 }
+
