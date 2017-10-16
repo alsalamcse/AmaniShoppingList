@@ -1,16 +1,23 @@
 package com.aslan.amani.shoppinglist;
 
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView etName;
     private TextView etEmail;
     private TextView password;
     private Button save;
+    private TextView repassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +27,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         etEmail = (TextView) findViewById(R.id.etEmail);
         password = (TextView) findViewById(R.id.password);
         save.setOnClickListener(this);
+        repassword=(TextView)findViewById(R.id.repassword);
     }
 
     @Override
@@ -45,10 +53,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         }
         if (stPassw.length()<8)||stPassw.equals(stPassw)==false)
         {
-
+password.setError("bad password");
+            isOk=false;
         }
-
-        creatAcount(); (stEmail,stPassw);
+        if (isOk)
+           creatAcount(); (stEmail,stPassw);
 
     }
 
