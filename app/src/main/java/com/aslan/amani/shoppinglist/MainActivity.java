@@ -52,14 +52,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
 
-         btnS.setOnClickListener(this);
+         btnSignup.setOnClickListener(this);
     }
 
 
     @Override
     public void onClick(View view)
     {
-)        {
+        {
 
         }
 

@@ -45,26 +45,26 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         String stName= etName.getText().toString();
         String stPassw=password.getText().toString();
           boolean isOk= true; // to chek if all feilds are filled correctly
-        if (stEmail.length()==0 ) || stEmail.indexOf('0')<1)
+        if( (stEmail.length()==0) || stEmail.indexOf('0')<1)
         {
             etEmail.setError("wrong email");
             isOk=false;
 
         }
-        if (stPassw.length()<8)||stPassw.equals(stPassw)==false)
+        if ((stPassw.length()<8)||stPassw.equals(stPassw)==false)
         {
 password.setError("bad password");
             isOk=false;
         }
         if (isOk)
-           creatAcount(); (stEmail,stPassw);
+           creatAcount();(etEmail,password);
 
     }
 
 
 
-    private void creatAcount(String email, String passw) {
-        auth.createUserWithEmailAndPassword(email,passw).addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
+    private void creatAcount() {
+        auth.createUserWithEmail.addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful())
