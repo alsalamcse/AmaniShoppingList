@@ -14,4 +14,6 @@
     <string name="email">new email</string>
     <string name="password">new password</string>
     <string name="save">save</string>
+    <string name="total">total</string>
+    <string name="Count">Count</string>
 </resources>

@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView etName;
@@ -18,6 +19,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private TextView password;
     private Button save;
     private TextView repassword;
+    private 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         password = (TextView) findViewById(R.id.password);
         save.setOnClickListener(this);
         repassword=(TextView)findViewById(R.id.repassword);
+
+
+
     }
 
     @Override

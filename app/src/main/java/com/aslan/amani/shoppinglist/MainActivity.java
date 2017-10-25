@@ -31,13 +31,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        password=(TextView) findViewById (R.id.password);
-        email= (TextView) findViewById (R.id.email) ;
-        forgot= (Button)findViewById(R.id.forgot);
-        btnSignIn= (Button)findViewById(R.id.signIn);
-        btnSignup=(Button)findViewById(R.id.signUp);
-        auth= FirebaseAuth.getInstance();
-        firbaseUser=auth.getCurrentUser();
+        password = (TextView) findViewById(R.id.password);
+        email = (TextView) findViewById(R.id.email);
+        forgot = (Button) findViewById(R.id.forgot);
+        btnSignIn = (Button) findViewById(R.id.signIn);
+        btnSignup = (Button) findViewById(R.id.signUp);
+        auth = FirebaseAuth.getInstance();
+        firbaseUser = auth.getCurrentUser();
+
 
          if (firbaseUser == null) {
             // Not signed in, launch the Sign In activity
